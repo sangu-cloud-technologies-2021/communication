@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message Numbers {
+    repeated int32 numbers = 1;
+}
+
+message Sum {
+    int32 sum = 1;
+}
+
+service SumService {
+    rpc sum(Numbers) returns (Sum) {}
+}
